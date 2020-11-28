@@ -19,4 +19,36 @@ public abstract class Instrument implements IPlay {
         this.buyingPrice = 0;
         this.salePrice = 0;
     }
+
+    public String getMake(){
+        return make;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public String getColour(){
+        return colour;
+    }
+
+    public InstrumentType getInstrumentType(){
+        return instrumentType;
+    }
+
+    public double getBuyingPrice(){
+        return buyingPrice;
+    }
+
+    public void SetBuyingPrice(double buyingPrice){
+        this.buyingPrice = buyingPrice;
+    }
+
+    public double getSalePrice(){
+        return salePrice;
+    }
+
+    public void setSalePrice(double salePrice){
+        this.salePrice = salePrice;
+    }
 }
