@@ -50,8 +50,16 @@ public class DrumsTest {
         assertEquals(800, drums.getBuyingPrice(), 0.00);
    }
 
-   @Test
+    @Test
     public void canPlayInstrument(){
-        assertEquals("Doof", drums.play());
-   }
+        assertEquals("Drums go: Doof", drums.play("Doof"));
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        drums.setBuyingPrice(800.00);
+        drums.setSalePrice(1040.00);
+        assertEquals(240, drums.calculateMarkup(800.00, 1040.00), 0.01);
+
+    }
 }

@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Piano extends Instrument {
+import Interfaces.IPlay;
+
+public class Piano extends Instrument implements IPlay {
 
     private int numberOfKeys;
 
@@ -13,7 +15,7 @@ public class Piano extends Instrument {
         return this.numberOfKeys;
     }
 
-    public String play(){
-        return"tinkle tinkle";
+    public String play(String sound){
+        return "Piano goes: " + sound;
     }
 }

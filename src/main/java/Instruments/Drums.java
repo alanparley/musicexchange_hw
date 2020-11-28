@@ -1,6 +1,9 @@
 package Instruments;
 
-public class Drums extends Instrument {
+import Interfaces.IPlay;
+import Interfaces.ISell;
+
+public class Drums extends Instrument implements IPlay, ISell {
 
     private int numberOfDrums;
 
@@ -14,9 +17,11 @@ public class Drums extends Instrument {
     }
 
 
-    public String play(){
-        return "Doof";
+    public String play(String sound){
+        return "Drums go: " + sound;
     }
+
+
 }
 
 

@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Violin extends Instrument {
+import Interfaces.IPlay;
+
+public class Violin extends Instrument implements IPlay {
 
     private int numberOfStrings;
 
@@ -13,7 +15,7 @@ public class Violin extends Instrument {
         return this.numberOfStrings;
     }
 
-    public String play(){
-        return "Screeetch";
+    public String play(String sound){
+        return "Violin goes: " + sound;
     }
 }

@@ -2,8 +2,9 @@ package Instruments;
 
 
 import Interfaces.IPlay;
+import Interfaces.ISell;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument implements IPlay, ISell {
     private String make;
     private String model;
     private String colour;
@@ -51,4 +52,9 @@ public abstract class Instrument implements IPlay {
     public void setSalePrice(double salePrice){
         this.salePrice = salePrice;
     }
+
+    public double calculateMarkup(double buyingPrice, double salePrice) {
+        return salePrice - buyingPrice;
+    }
+
 }

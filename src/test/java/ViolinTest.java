@@ -10,48 +10,56 @@ public class ViolinTest {
     Violin violin;
 
     @Before
-    public void before(){
+    public void before() {
         violin = new Violin("Fiddlerman", "FID1000", "Brown", InstrumentType.STRINGS, 4);
     }
 
     @Test
-    public void canGetMake(){
+    public void canGetMake() {
         assertEquals("Fiddlerman", violin.getMake());
     }
 
     @Test
-    public void canGetModel(){
+    public void canGetModel() {
         assertEquals("FID1000", violin.getModel());
     }
 
     @Test
-    public void canGetColour(){
+    public void canGetColour() {
         assertEquals("Brown", violin.getColour());
     }
 
     @Test
-    public void canGetInstrumentType(){
+    public void canGetInstrumentType() {
         assertEquals(InstrumentType.STRINGS, violin.getInstrumentType());
     }
 
     @Test
-    public void canGetNumberOfStrings(){
+    public void canGetNumberOfStrings() {
         assertEquals(4, violin.getNumberOfStrings());
     }
 
     @Test
-    public void canGetBuyingPrice(){
+    public void canGetBuyingPrice() {
         assertEquals(0.00, violin.getBuyingPrice(), 0.00);
     }
 
     @Test
-    public void canSetBuyingPrice(){
+    public void canSetBuyingPrice() {
         violin.setBuyingPrice(400.00);
         assertEquals(400.00, violin.getBuyingPrice(), 0.00);
     }
 
     @Test
-    public void canPlayInstrument(){
-        assertEquals("Screeetch", violin.play());
+    public void canPlayInstrument() {
+        assertEquals("Violin goes: Screeetch", violin.play("Screeetch"));
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        violin.setBuyingPrice(400.00);
+        violin.setSalePrice(540.00);
+        assertEquals(140.00, violin.calculateMarkup(400.00, 540.00), 0.01);
+    }
+
 }
