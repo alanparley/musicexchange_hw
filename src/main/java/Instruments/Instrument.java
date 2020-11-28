@@ -40,7 +40,7 @@ public abstract class Instrument implements IPlay {
         return buyingPrice;
     }
 
-    public void SetBuyingPrice(double buyingPrice){
+    public void setBuyingPrice(double buyingPrice){
         this.buyingPrice = buyingPrice;
     }
 
