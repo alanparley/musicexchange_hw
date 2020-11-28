@@ -51,6 +51,12 @@ public class ViolinTest {
     }
 
     @Test
+    public void canSetSalePrice(){
+        violin.setSalePrice(540.00);
+        assertEquals(540.00, violin.getSalePrice(), 0.00);
+    }
+
+    @Test
     public void canPlayInstrument() {
         assertEquals("Violin goes: Screeetch", violin.play("Screeetch"));
     }
@@ -59,7 +65,7 @@ public class ViolinTest {
     public void canCalculateMarkup() {
         violin.setBuyingPrice(400.00);
         violin.setSalePrice(540.00);
-        assertEquals(140.00, violin.calculateMarkup(400.00, 540.00), 0.01);
+        assertEquals(140.00, violin.calculateMarkup(violin.getBuyingPrice(), violin.getSalePrice()), 0.01);
     }
 
 }

@@ -60,7 +60,7 @@ public class GuitarTest {
     public void canCalculateMarkup(){
         guitar.setBuyingPrice(500.00);
         guitar.setSalePrice(625.00);
-        assertEquals(125.00, guitar.calculateMarkup(500.00, 625.00), 0.01);
+        assertEquals(125.00, guitar.calculateMarkup(guitar.getBuyingPrice(), guitar.getSalePrice()), 0.01);
 
     }
 }

@@ -59,7 +59,7 @@ public class DrumsTest {
     public void canCalculateMarkup(){
         drums.setBuyingPrice(800.00);
         drums.setSalePrice(1040.00);
-        assertEquals(240, drums.calculateMarkup(800.00, 1040.00), 0.01);
+        assertEquals(240, drums.calculateMarkup(drums.getBuyingPrice(), drums.getSalePrice()), 0.01);
 
     }
 }

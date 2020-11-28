@@ -61,7 +61,7 @@ public class PianoTest {
     public void canCalculateMarkup() {
         piano.setBuyingPrice(1000.00);
         piano.setSalePrice(1450.00);
-        assertEquals(450.00, piano.calculateMarkup(1000, 1450.00), 0.01);
+        assertEquals(450.00, piano.calculateMarkup(piano.getBuyingPrice(), piano.getSalePrice()), 0.01);
     }
 
 }
