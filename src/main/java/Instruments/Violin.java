@@ -1,8 +1,9 @@
 package Instruments;
 
 import Interfaces.IPlay;
+import Interfaces.ISell;
 
-public class Violin extends Instrument implements IPlay {
+public class Violin extends Instrument implements IPlay, ISell {
 
     private int numberOfStrings;
 
