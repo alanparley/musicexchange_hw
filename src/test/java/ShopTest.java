@@ -1,3 +1,4 @@
+import Accessories.GuitarCable;
 import Instruments.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +12,7 @@ public class ShopTest {
     private Guitar guitar;
     private Piano piano;
     private Violin violin;
+    private GuitarCable guitarCable;
 
     @Before
     public void before(){
@@ -19,6 +21,7 @@ public class ShopTest {
         guitar = new Guitar("Fender", "Stratocaster", "Black", InstrumentType.STRINGS, 6);
         piano = new Piano("Yamaha", "P1000", "White", InstrumentType.KEYS, 88);
         violin = new Violin("Fiddlerman", "FID1000", "Brown", InstrumentType.STRINGS, 4);
+        guitarCable = new GuitarCable("Wirey", "3ft mono", 10, 15);
 
     }
 
@@ -38,7 +41,8 @@ public class ShopTest {
         shop.addToStock(guitar);
         shop.addToStock(piano);
         shop.addToStock(violin);
-        assertEquals(4, shop.getStockcount().size());
+        shop.addToStock(guitarCable);
+        assertEquals(5, shop.getStockcount().size());
     }
 
     @Test
