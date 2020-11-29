@@ -8,7 +8,7 @@ public abstract class Accessory implements ISell {
     private double buyingPrice;
     private double salePrice;
 
-    public Accessory(String make, String description, double buyingPrice, double salePrice) {
+    public Accessory(String make, String description) {
        this.make = make;
        this.description = description;
        this.buyingPrice = 0;
