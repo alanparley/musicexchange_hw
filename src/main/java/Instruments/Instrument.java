@@ -57,4 +57,5 @@ public abstract class Instrument implements IPlay, ISell {
         return salePrice - buyingPrice;
     }
 
+
 }
