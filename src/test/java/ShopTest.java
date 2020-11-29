@@ -27,4 +27,30 @@ public class ShopTest {
         assertEquals("Ray's Music Exchange", shop.getName());
     }
 
+    @Test
+    public void canGetStockcount(){
+        assertEquals(0, shop.getStockcount().size());
+    }
+
+    @Test
+    public void canAddItemsToStock(){
+        shop.addToStock(drums);
+        shop.addToStock(guitar);
+        shop.addToStock(piano);
+        shop.addToStock(violin);
+        assertEquals(4, shop.getStockcount().size());
+    }
+
+    @Test
+    public void canRemoveItemsFromStock(){
+        shop.addToStock(drums);
+        shop.addToStock(guitar);
+        shop.addToStock(piano);
+        shop.addToStock(violin);
+        shop.removeFromStock(drums);
+        shop.removeFromStock(guitar);
+        assertEquals(2, shop.getStockcount().size());
+
+    }
+
 }

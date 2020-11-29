@@ -16,4 +16,18 @@ public class Shop {
     public String getName(){
         return this.name;
     }
-}
+
+    public ArrayList<ISell> getStockcount(){
+        return this.stock;
+    }
+
+    public void addToStock(ISell stock){
+            this.stock.add(stock);
+        }
+
+    public void removeFromStock(ISell stock){
+        this.stock.remove(stock);
+    }
+    }
+
+
