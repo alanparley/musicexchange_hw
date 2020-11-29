@@ -7,7 +7,5 @@ public class GuitarCable extends Accessory implements ISell {
         super(make, description, buyingPrice, salePrice);
     }
 
-    public double calculateMarkup(double buyingPrice, double salePrice) {
-        return salePrice - buyingPrice;
-    }
+
 }
